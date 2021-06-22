@@ -1,0 +1,6 @@
+FROM nvcr.io/nvidia/tritonserver:21.02-py3-sdk
+
+RUN python3 -m pip install --no-cache-dir -U pip &&\
+    python3 -m pip install --no-cache-dir -U setuptools\
+                   opencv-python
+

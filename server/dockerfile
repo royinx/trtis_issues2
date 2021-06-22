@@ -1,0 +1,7 @@
+FROM nvcr.io/nvidia/tritonserver:21.02-py3
+
+COPY ./models /models
+
+WORKDIR /models
+
+ENTRYPOINT ["tritonserver","--model-repository=/models"]
